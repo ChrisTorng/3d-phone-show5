@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 手機模型展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>3D 手機模型展示</h1>
+    </header>
+    
+    <div class="phone-selection">
+        <button class="phone-btn active" data-phone="phone1">手機 1</button>
+        <button class="phone-btn" data-phone="phone2">手機 2</button>
+        <button class="phone-btn" data-phone="phone3">手機 3</button>
+    </div>
+    
+    <div id="phone-info">
+        <div class="phone-details active" id="phone1">
+            <h2>手機型號 1</h2>
+            <p>螢幕尺寸: 6.7 吋</p>
+            <p>解析度: 2778 x 1284 像素</p>
+            <p>相機: 三鏡頭 12MP 廣角</p>
+            <p>電池容量: 3687 mAh</p>
+        </div>
+        <div class="phone-details" id="phone2">
+            <h2>手機型號 2</h2>
+            <p>螢幕尺寸: 6.2 吋</p>
+            <p>解析度: 2400 x 1080 像素</p>
+            <p>相機: 四鏡頭 108MP 主鏡頭</p>
+            <p>電池容量: 4500 mAh</p>
+        </div>
+        <div class="phone-details" id="phone3">
+            <h2>手機型號 3</h2>
+            <p>螢幕尺寸: 6.5 吋</p>
+            <p>解析度: 2340 x 1080 像素</p>
+            <p>相機: 雙鏡頭 64MP 主鏡頭</p>
+            <p>電池容量: 5000 mAh</p>
+        </div>
+    </div>
+
+    <div id="phone-display-container">
+        <div id="phone-display"></div>
+        <div class="controls">
+            <button id="rotate-left">← 向左旋轉</button>
+            <button id="rotate-right">向右旋轉 →</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

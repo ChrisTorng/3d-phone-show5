@@ -1,0 +1,39 @@
+{
+    "servers": {
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@executeautomation/playwright-mcp-server"
+            ]
+        },
+        "git": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-git",
+                "--repository",
+                "~/GitHub/ChrisTorng/3d-phone-show"
+            ]
+        },
+        "sqlite": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "ai/mcp/sqlite",
+                "run",
+                "mcp-server-sqlite",
+                "--db-path",
+                "{workspaceFolder}/data/phones.db"
+            ]
+        },
+        "github-actions": {
+            "command": "node",
+            "args": [
+                "ai/mcp/github-actions-mcp-server/dist/index.js"
+            ],
+            "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+            }
+        }
+    }
+}
